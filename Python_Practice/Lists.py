@@ -1,3 +1,4 @@
+#List items are ordered, changeable, and allow duplicate values.
 colors = ["red", "blue", "magenta", "grey", "yellow", "black", "purple"]
 mixListIsAvaliable = ["string", False, 5, 5.5 ]
 moreColors= ["green"]
