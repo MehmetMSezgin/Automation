@@ -1,0 +1,3 @@
+What color are apples? (a) Red (b) Purple (c) Orange
+What color are bananas? (a) teal (b) magenta (c) Yellow
+What color are strawberries? (a)Yellow (b)Red (c)Blue
