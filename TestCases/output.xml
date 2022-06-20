@@ -1,44 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 5.0 (Python 3.7.4 on win32)" generated="20220603 19:14:55.772" rpa="false" schemaversion="3">
-<suite id="s1" name="TC1" source="C:\Users\Mehme\PycharmProjects\RobotFramework_Python_Practices\TestCases\TC1.robot">
+<robot generator="Robot 5.0 (Python 3.7.9 on win32)" generated="20220613 15:11:56.444" rpa="false" schemaversion="3">
+<suite id="s1" name="TC1" source="C:\Users\ett19809\PycharmProjects\RobotFramework_Python_Practices\TestCases\TC1.robot">
 <test id="s1-t1" name="LoginTest" line="10">
 <kw name="Open Browser" library="SeleniumLibrary">
 <arg>${url}</arg>
 <arg>${browser}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20220603 19:14:55.986" level="INFO">Opening browser 'chrome' to base url 'https://www.nopcommerce.com/en/login?returnUrl=%2Fen%2Fget-started'.</msg>
-<status status="PASS" starttime="20220603 19:14:55.985" endtime="20220603 19:15:00.228"/>
+<msg timestamp="20220613 15:11:56.607" level="INFO">Opening browser 'chrome' to base url 'https://www.nopcommerce.com/en/login?returnUrl=%2Fen%2Fget-started'.</msg>
+<status status="PASS" starttime="20220613 15:11:56.607" endtime="20220613 15:12:00.374"/>
 </kw>
 <kw name="loginToApplication">
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>id:Username</arg>
 <arg>mmsezgin@gmai.com</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220603 19:15:00.230" level="INFO">Typing text 'mmsezgin@gmai.com' into text field 'id:Username'.</msg>
-<status status="PASS" starttime="20220603 19:15:00.229" endtime="20220603 19:15:00.339"/>
+<msg timestamp="20220613 15:12:00.375" level="INFO">Typing text 'mmsezgin@gmai.com' into text field 'id:Username'.</msg>
+<status status="PASS" starttime="20220613 15:12:00.374" endtime="20220613 15:12:00.417"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>id:Password</arg>
 <arg>12345</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220603 19:15:00.339" level="INFO">Typing text '12345' into text field 'id:Password'.</msg>
-<status status="PASS" starttime="20220603 19:15:00.339" endtime="20220603 19:15:00.456"/>
+<msg timestamp="20220613 15:12:00.418" level="INFO">Typing text '12345' into text field 'id:Password'.</msg>
+<status status="PASS" starttime="20220613 15:12:00.417" endtime="20220613 15:12:00.464"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>xpath://*[@type='submit']</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220603 19:15:00.457" level="INFO">Clicking element 'xpath://*[@type='submit']'.</msg>
-<status status="PASS" starttime="20220603 19:15:00.456" endtime="20220603 19:15:02.248"/>
+<msg timestamp="20220613 15:12:00.465" level="INFO">Clicking element 'xpath://*[@type='submit']'.</msg>
+<status status="PASS" starttime="20220613 15:12:00.465" endtime="20220613 15:12:00.984"/>
 </kw>
-<status status="PASS" starttime="20220603 19:15:00.229" endtime="20220603 19:15:02.248"/>
+<status status="PASS" starttime="20220613 15:12:00.374" endtime="20220613 15:12:00.984"/>
 </kw>
 <kw name="Close Browser" library="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20220603 19:15:02.249" endtime="20220603 19:15:04.387"/>
+<status status="PASS" starttime="20220613 15:12:00.985" endtime="20220613 15:12:03.084"/>
 </kw>
-<status status="PASS" starttime="20220603 19:14:55.985" endtime="20220603 19:15:04.389"/>
+<status status="PASS" starttime="20220613 15:11:56.607" endtime="20220613 15:12:03.084"/>
 </test>
-<status status="PASS" starttime="20220603 19:14:55.774" endtime="20220603 19:15:04.391"/>
+<status status="PASS" starttime="20220613 15:11:56.444" endtime="20220613 15:12:03.084"/>
 </suite>
 <statistics>
 <total>
