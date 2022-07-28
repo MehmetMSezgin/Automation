@@ -1,11 +1,13 @@
 import cv2
 import pytesseract
+import glob
+
 
 #define exe file path for connection
 pytesseract.pytesseract.tesseract_cmd = 'C:\\Program Files (x86)\\Tesseract-OCR\\tesseract.exe'
 
 #read our image
-img = cv2.imread('out.png')
+img = cv2.imread('example.png')
 
 #pytesseract accepts only rgb values
 #we should convert it

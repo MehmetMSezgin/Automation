@@ -1,0 +1,116 @@
+Unpack a list:
+
+fruits = ["apple", "banana", "cherry"]
+x, y, z = fruits
+print(x)
+print(y)
+print(z)
+
+++++++++++++++++++++++++++++++++++++++++
+In the print() function, you output multiple variables, separated by a comma:
+
+Example
+x = "Python"
+y = "is"
+z = "awesome"
+print(x, y, z)
+
+++++++++++++++++++++++++++++++++++++++++
+
+If you use the global keyword, the variable belongs to the global scope:
+
+def myfunc():
+  global x
+  x = "fantastic"
+
+myfunc()
+
+print("Python is " + x)
+++++++++++++++++++++++++++++++++++++++++
+Example	Data Type
+x = "Hello World"	str
+x = 20	int
+x = 20.5	float
+x = 1j	complex
+x = ["apple", "banana", "cherry"]	list
+x = ("apple", "banana", "cherry")	tuple
+x = range(6)	range
+x = {"name" : "John", "age" : 36}	dict
+x = {"apple", "banana", "cherry"}	set
+x = frozenset({"apple", "banana", "cherry"})	frozenset
+x = True	bool
+x = b"Hello"	bytes
+x = bytearray(5)	bytearray
+x = memoryview(bytes(5))	memoryview
+x = None	NoneType
+
+++++++++++++++++++++++++++++++++++++++++
+Import the random module, and display a random number between 1 and 9:
+
+import random
+
+print(random.randrange(1, 10))
+++++++++++++++++++++++++++++++++++++++++
+Loop through the letters in the word "banana":
+
+for x in "banana":
+  print(x)
+
+  Like many other popular programming languages, strings in Python are arrays of bytes representing unicode characters.
+++++++++++++++++++++++++++++++++++++++++
+Check if "free" is present in the following text:
+
+txt = "The best things in life are free!"
+print("free" in txt)
+
+txt = "The best things in life are free!"
+if "free" in txt:
+  print("Yes, 'free' is present.")
+
+Check if "expensive" is NOT present in the following text:
+
+txt = "The best things in life are free!"
+print("expensive" not in txt)
+
+++++++++++++++++++++++++++++++++++++++++
+
+Get the characters from the start to position 5 (not included):
+
+b = "Hello, World!"
+print(b[:5])
+
+Get the characters from position 2, and all the way to the end:
+
+b = "Hello, World!"
+print(b[2:])
+++++++++++++++++++++++++++++++++++++++++
+
+Exit the loop when i is 3:
+
+i = 1
+while i < 6:
+  print(i)
+  if i == 3:
+    break
+  i += 1
+
+++++++++++++++++++++++++++++++++++++++++
+
+Continue to the next iteration if i is 3:
+
+i = 0
+while i < 6:
+  i += 1
+  if i == 3:
+    continue
+  print(i)
+
+++++++++++++++++++++++++++++++++++++++++
+++++++++++++++++++++++++++++++++++++++++
+++++++++++++++++++++++++++++++++++++++++
+++++++++++++++++++++++++++++++++++++++++
+++++++++++++++++++++++++++++++++++++++++
+++++++++++++++++++++++++++++++++++++++++
+++++++++++++++++++++++++++++++++++++++++
+++++++++++++++++++++++++++++++++++++++++
+++++++++++++++++++++++++++++++++++++++++
