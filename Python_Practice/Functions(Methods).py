@@ -1,5 +1,5 @@
 def sayHi():  # function = method java
-    print("hello user")
+    print("'hello user'")
 sayHi()
 
 
