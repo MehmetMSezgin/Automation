@@ -10,7 +10,6 @@ list_of_rows = (number_sets.readlines())
 
 number_of_rows = len(list_of_rows)
 # print(len(list_of_rows))
-# 2
 
 
 for j in range(number_of_rows):
@@ -60,14 +59,16 @@ for j in range(number_of_rows):
     final_answer = final_answer + answer_row
     final_answer.append("\n")
 
-print(final_answer)
 print("***********************")
+print(final_answer)
 number_sets.close()
 
 final_answer_string = ','.join(str(x) for x in final_answer)
+final_answer_string = final_answer_string.replace(",", " ")
 
 open("output.txt", "w")
 output = open("output.txt", "a")
+print(final_answer_string)
 output.write(final_answer_string)
 output.close()
 
