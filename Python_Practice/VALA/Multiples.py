@@ -1,6 +1,7 @@
 # final solution
 final_answer = []
 
+
 # read numbers
 number_sets = open("input.txt", "r")
 
