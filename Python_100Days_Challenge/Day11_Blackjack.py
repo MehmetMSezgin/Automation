@@ -35,11 +35,14 @@ def blackjack():
     print(f"Your second card is {user_second_card}")
 
     if user_second_card == 11:
-        which_1_or_11 = input("Would you prefer 1 or 11")
+        which_1_or_11 = int(input("Would you prefer 1 or 11 \n"))
         if which_1_or_11 == 1:
             user_second_card = 1
+            print("user second card is 1")
         elif which_1_or_11 == 11:
             user_second_card = 11
+            print("user second card is 11")
+        print(user_second_card)
 
     dealer_second_card = cards[random.randint(0, 12)]
 
@@ -66,11 +69,11 @@ def blackjack():
                 print(f"Your score: {user_total_score}")
                 print(f"Dealer score: {dealer_total_score}")
 
-            if user_total_score > dealer_total_score:
+            if user_total_score > dealer_total_score or dealer_total_score >= 21:
                 print(f"Your score: {user_total_score}")
                 print(f"Dealer score: {dealer_total_score}")
                 return 1
-            elif user_total_score < dealer_total_score:
+            elif user_total_score < dealer_total_score <= 21:
                 print(f"Your score: {user_total_score}")
                 print(f"Dealer score: {dealer_total_score}")
                 return 2
@@ -101,8 +104,6 @@ def blackjack():
                 print(f"Your score: {user_total_score}")
                 print(f"Dealer score: {dealer_total_score}")
                 return 2
-
-
 
 
 play = blackjack()
