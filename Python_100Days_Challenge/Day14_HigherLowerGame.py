@@ -28,9 +28,9 @@ while flag:
     b_country = data[list_number_B].get("country")
     b_follower = data[list_number_B].get("follower_count")
 
-    print(f'Compare A: {a_name}, {a_description}, {a_country} ,{a_follower}.')
+    print(f'Compare A: {a_name}, {a_description}, {a_country} .')
     print(vs)
-    print(f'Againist B: {b_name}, {b_description}, {b_country} , {b_follower}.')
+    print(f'Againist B: {b_name}, {b_description}, {b_country} .')
 
     user_selection = input("Who has more followers. Type 'A' or 'B' \n").upper()
 
