@@ -48,6 +48,19 @@ DAY 16 - DAY ...
 
 * Python packages : https://pypi.org/
 
+*   Constructor
+        - Initializing an object
+        - To set variables , counters, switches ...
+        - __init__ is called each time when you create object
+
+* When you modify object's attributes into method , do not forget 'self'
+
+* pass : If you dont want to fill class now
+
+* Trivia database : https://opentdb.com/
+
+* When we get some data from internet just convert into object and keep it like that
+
 
 '''
 
