@@ -1,0 +1,82 @@
+'''
+Trivia database
+https://opentdb.com/
+'''
+
+question_data = [{"category": "History", "type": "boolean", "difficulty": "easy",
+                  "question": "The Cold War ended with Joseph Stalin&#039;s death.",
+                  "correct_answer": "False", "incorrect_answers": ["True"]},
+                 {"category": "History", "type": "boolean", "difficulty": "easy",
+                  "question": "The Tiananmen Square protests of 1989 were held in Hong Kong.",
+                  "correct_answer": "False", "incorrect_answers": ["True"]},
+                 {"category": "History", "type": "boolean", "difficulty": "easy",
+                  "question": "The Spitfire originated from a racing plane.",
+                  "correct_answer": "True", "incorrect_answers": ["False"]},
+                 {"category": "History", "type": "boolean", "difficulty": "easy",
+                  "question": "The United States Department of Homeland Security was formed in response to the September 11th attacks.",
+                  "correct_answer": "True", "incorrect_answers": ["False"]},
+                 {"category": "History", "type": "boolean", "difficulty": "easy",
+                  "question": "Former United States Presidents John Adams and Thomas Jefferson died within hours of each other.",
+                  "correct_answer": "True", "incorrect_answers": ["False"]},
+                 {"category": "History", "type": "boolean", "difficulty": "easy",
+                  "question": "The United States of America declared their independence from the British Empire on July 4th, 1776.",
+                  "correct_answer": "True", "incorrect_answers": ["False"]},
+                 {"category": "History", "type": "boolean", "difficulty": "easy",
+                  "question": "Adolf Hitler was tried at the Nuremberg trials.",
+                  "correct_answer": "False", "incorrect_answers": ["True"]},
+                 {"category": "History", "type": "boolean", "difficulty": "easy",
+                  "question": "Kublai Khan is the grandchild of Genghis Khan?",
+                  "correct_answer": "True", "incorrect_answers": ["False"]},
+                 {"category": "History", "type": "boolean", "difficulty": "easy",
+                  "question": "The United States of America was the first country to launch a man into space.",
+                  "correct_answer": "False", "incorrect_answers": ["True"]},
+                 {"category": "History", "type": "boolean", "difficulty": "easy",
+                  "question": "Thomas Crapper was a plumber who invented the flushing toilet.",
+                  "correct_answer": "False", "incorrect_answers": ["True"]}]
+
+question_data_1 = [
+    {"text": "A slug's blood is green.", "answer": "True"},
+    {"text": "The loudest animal is the African Elephant.", "answer": "False"},
+    {"text": "Approximately one quarter of human bones are in the feet.", "answer": "True"},
+    {"text": "The total surface area of a human lungs is the size of a football pitch.", "answer": "True"},
+    {"text": "In West Virginia, USA, if you accidentally hit an animal with your car,"
+             " you are free to take it home to eat.", "answer": "True"},
+    {"text": "In London, UK, if you happen to die in the House of Parliament,"
+             " you are entitled to a state funeral.", "answer": "False"},
+    {"text": "It is illegal to pee in the Ocean in Portugal.", "answer": "True"},
+    {"text": "You can lead a cow down stairs but not up stairs.", "answer": "False"},
+    {"text": "Google was originally called 'Backrub'.", "answer": "True"},
+    {"text": "Buzz Aldrin's mother's maiden name was 'Moon'.", "answer": "True"},
+    {"text": "No piece of square dry paper can be folded in half more than 7 times.", "answer": "False"},
+    {"text": "A few ounces of chocolate can to kill a small dog.", "answer": "True"}
+]
+
+question_data_2 = [
+    {"category": "History", "type": "boolean", "difficulty": "medium",
+     "question": "The two atomic bombs dropped on Japan by the United States in August 1945 were named &#039;Little Man&#039; and &#039;Fat Boy&#039;.",
+     "correct_answer": "False", "incorrect_answers": ["True"]},
+    {"category": "History", "type": "boolean", "difficulty": "medium",
+     "question": "In World War II, Hawker Typhoons served in the Pacific theater.", "correct_answer": "False",
+     "incorrect_answers": ["True"]}, {"category": "History", "type": "boolean", "difficulty": "medium",
+                                      "question": "The M41 Walker Bulldog remains in service in some countries to this day.",
+                                      "correct_answer": "True", "incorrect_answers": ["False"]},
+    {"category": "History", "type": "boolean", "difficulty": "medium",
+     "question": "&quot;I disapprove of what you say, but I will defend to the death your right to say it&quot; is a quote from French philosopher Voltaire.",
+     "correct_answer": "False", "incorrect_answers": ["True"]},
+    {"category": "History", "type": "boolean", "difficulty": "medium",
+     "question": "If you grab the bladed end of a longsword in a specific way, you will not cut yourself.",
+     "correct_answer": "True", "incorrect_answers": ["False"]},
+    {"category": "History", "type": "boolean", "difficulty": "medium",
+     "question": "In 1967, a magazine published a story about extracting hallucinogenic chemicals from bananas to raise moral questions about banning drugs.",
+     "correct_answer": "True", "incorrect_answers": ["False"]},
+    {"category": "History", "type": "boolean", "difficulty": "medium",
+     "question": "Abraham Lincoln was the first U.S. President to be born outside the borders of the thirteen original states. ",
+     "correct_answer": "True", "incorrect_answers": ["False"]},
+    {"category": "History", "type": "boolean", "difficulty": "medium",
+     "question": "United States President Ronald Reagan was the first president to appoint a woman to the Supreme Court. ",
+     "correct_answer": "True", "incorrect_answers": ["False"]},
+    {"category": "History", "type": "boolean", "difficulty": "medium",
+     "question": "Martin Luther King Jr. and Anne Frank were born the same year. ", "correct_answer": "True",
+     "incorrect_answers": ["False"]}, {"category": "History", "type": "boolean", "difficulty": "medium",
+                                       "question": "Sir Issac Newton served as a Member of Parliament, but the only recorded time he spoke was to complain about a draft in the chambers.",
+                                       "correct_answer": "True", "incorrect_answers": ["False"]}]
