@@ -61,6 +61,18 @@ DAY 16 - DAY ...
 
 * When we get some data from internet just convert into object and keep it like that
 
+* Different import techniques
+    - import turtle
+    - from turtle import Turtle
+    - from turtle import *
+    - import turtle as t
+
+* for _ in range(4):
+
+* Convert tuple to list
+my_tuple = (1,3,5) 
+list(my_tuple)
+
 
 '''
 
