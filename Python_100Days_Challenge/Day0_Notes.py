@@ -73,6 +73,9 @@ DAY 16 - DAY ...
 my_tuple = (1,3,5) 
 list(my_tuple)
 
+* screen.onkey(key="space", fun=move_forwards)  
+!!! When pass function as inputs remove paranthesis
+
 
 '''
 
