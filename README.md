@@ -1,1 +1,1 @@
-This repository is created for python practices
+This repository is created for python practices. 
