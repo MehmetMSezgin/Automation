@@ -1,0 +1,254 @@
+Object oriented:
+
+- The parameter name self is only used when referring to the features of the object as an instance of the class. These include both the data attributes and the methods attached to an object. To make the terminology more confusing, the data attributes and methods are together sometimes referred to simply as the attributes of the object, which is why in this material we have often specified data attributes when we mean the variables defined within the class. This is where the terminology of some Python programmers slightly differs from the terminology used in object oriented programming more widely, where attributes usually refers to just the data attributes of an object.
+
+It is also possible to create local variables within method definitions without referring to self. You should do so if there is no need to access the variables outside the method. Local variables within methods have no special keywords; they are used just like any normal variables you have come across thus far.
+
+- __str__ : we want more control over what is printed out. The easiest way to do this is to add a special __str__ method to the class definition. Its purpose is to return a snapshot of the state of the object in string format. If the class definition contains a __str__ method, the value returned by the method is the one printed out when the print command is executed.
+
+- Every value in Python is an object. Any object you create based on a class you've defined yourself works exactly the same as any "regular" Python object. You may remember that lists do not contain any objects themselves. They contain references to objects. The exact same object can appear multiple times in a single list, and it can be referred to multiple times within the list or outside it. The operator is is used for checking if the two references refer to the exact same object, while the operator == will tell you if the contents of the objects are the same.
+
+Objects can act as arguments to methods.
+
+- In Python programming all initialised variables refer to an object. There are, however, inevitably situations where we need to refer to something which does not exist, without causing errors. The keyword None represents exactly such an "empty" object.
+
+
+
+- ENCAPSULATION :
+
+ Hiding attributes from clients is called encapsulation
+A common feature in object oriented programming languages is that classes can usually hide their attributes from any prospective clients. Hidden attributes are usually called private. In Python this privacy is achieved by adding two underscores __ to the beginning of the attribute name:
+
+class CreditCard:
+    # the attribute number is private, while the attribute name is accessible
+    def __init__(self, number: str, name: str):
+        self.__number = number
+        self.name = name
+
+- Getters Setters
+In object oriented programming, methods which are dedicated to accessing and changing attributes are usually called getters and setters. Not all Python programmers use the terms "getter" and "setter", but the concept of properties outlined below is very similar, which is why we will use the generally accepted object oriented programming terminology here.
+We can add getter and setter methods for accessing the private attribute using the @property decorator:
+! When we call getter method , we do not need to use paranthesis
+For example ->
+pn = PhoneNumber() # create instance
+pn.phone_number_getter
+
+- Scope of methods
+The methods defined within a class can be hidden in exactly the same way as the attributes were in the previous section. If the method begins with two underscores __, it is not directly accessible by the client. For example inside of class Recipient which accepts email as attribute, we can create def __check_email(self, email: str)
+
+- Class variables
+Class variables, also known as static variables. A class variable is a variable which is accessed through the class itself, not through the instances created based on the class. For example a general rate value for class Bank which is just defined under class.
+
+- Class methods
+A class method, also called a static method, is a method which is not attached to any single instance of the class. A class method can be called without creating any instances of the class. A class method is defined with the @classmethod annotation. The first parameter is always cls. This method can be reached even without creating an instance of class.
+
+@classmethod
+def license_plate_valid(cls, plate: str):
+    if len(plate) < 3 or "-" not in plate:
+        return False
+
+
+
+- INHERITANCE
+
+A class can inherit the traits of another class. In addition to these inherited traits a class can also contain traits which are unique to it. The syntax for inheritance simply involves adding the base class name in parentheses on the header line.
+
+overriding: if a derived class has a method with the same name as the base class, the derived version overrides the original in instances of the derived class.
+
+A derived class inherits all traits from its base class. Those traits are directly accessible in the derived class, unless they have been defined as private in the base class (with two underscores before the name of the trait).
+
+As the attributes of a derived class are identical to a base class, there was no need to rewrite the constructor of derived class. We simply called the constructor of the base class
+
+Even if a derived class overrides a method in its base class, the derived class can still call the overridden method in the base class. (with super().)
+
+- Access Modifiers
+Access modifier     Example     Visible to client       Visible to derived class
+    Public         self.name        yes                     yes
+    Protected      self._name       no                      yes
+    Private        self.__name      no                      no
+
+A class can contain a method which returns an object of the very same class.
+
+- Overloading operators
+Python contains some specially named built-in methods for working with the standard arithmetic and comparison operators. The technique is called operator overloading.
+
+Operator    Traditional meaning                Name of method
+<           Less than                          __lt__(self, another)
+>           Greater than                       __gt__(self, another)
+==          Equal to                           __eq__(self, another)
+!=          Not equal to                       __ne__(self, another)
+<=          Less than or equal to              __le__(self, another)
+>=          Greater than or equal to           __ge__(self, another)
+
+You can also implement some other operators, including the following arithmetic operators:
+
+Operator    Traditional meaning                Name of method
++           Addition                           __add__(self, another)
+-           Subtraction                        __sub__(self, another)
+*           Multiplication                     __mul__(self, another)
+/           Division (floating point result)   __truediv__(self, another)
+//          Division (integer result)          __floordiv__(self, another)
+
+#--------------------------------------------------------------------------
+
+- List Comprehensions
+[<expression> for <item> in <series>]
+[<expression> for <item> in <series> if <Boolean expression>]
+[<expression 1> if <condition> else <expression 2>]
+[<expression 1> if <condition> else <expression 2> for <item> in <series>]
+
+# If there is also an else branch, the conditional comes first.
+# If there is just an if, it goes to the end. You can try swapping them around and see what happens.
+
+
+numbers = [1, 2, 3, 6, 5, 4, 7]
+
+# classic way
+strings = []
+for number in numbers:
+    strings.append(str(number))
+
+# comprehension
+#ex 1
+strings = [str(number) for number in numbers]
+
+
+#Ex 2
+numbers = [1, 1, 2, 3, 4, 6, 4, 5, 7, 10, 12, 3]
+
+even_items = [item for item in numbers if item % 2 == 0]
+print(even_items)
+
+
+
+
+- Lambda expressions
+We have mostly worked with functions from the viewpoint of modularity. It is true that functions play an important role in managing the complexity of your programs and avoiding code repetition. Functions are usually written so that they can be used many times.
+But sometimes you need something resembling a function that you will use just once. Lambda expressions allow you to create small, anonymous functions which are created (and discarded) as they are needed in the code. The general syntax is as follows:
+
+lambda <parameters> : <expression>
+
+
+- GENERATORS
+Python generators are a way of producing just the next item in a series when it is needed, essentially running the generation process for the series only once (for a given execution of a program).
+They work mostly like normal functions, as they can be called and will return values, but the value a generator function returns differs from a normal function.
+A normal function should return the same value every time, given the same arguments.
+A generator function, on the other hand, should remember its current state and return the next item in the series, which may be different from the previous item.
+
+
+- Some programming paradigm
+    * imperative programming, where the program consists of a sequence of commands which is executed in order
+    * procedural programming, where the program is grouped into procedures or sub-programs
+    * object-oriented programming, where the program and its state is stored in objects defined in classes.
+
+- MAP function
+The map function executes some operation on each item in an iterable series.
+This sounds a lot like the effect a comprehension has, but the syntax is different.
+map(<function>, <series>)
+
+# Python program to demonstrate working
+# of map.
+
+"""
+Ex 1
+"""
+# Return double of n
+def addition(n):
+    return n + n
+
+# We double all numbers using map()
+numbers = (1, 2, 3, 4)
+result = map(addition, numbers)
+print(list(result))
+
+"""
+Ex 2
+"""
+str_list = ["123","-10", "23", "98", "0", "-110"]
+
+integers = map(lambda x : int(x), str_list)
+
+print(integers) # this tells us the type of object we're dealing with
+
+for number in integers:
+    print(number)
+
+
+
+- FILTER
+The built-in Python function filter is similar to the map function, but, as the name implies, it does not take all the items from the source.
+Instead, it filters them with a criterion function, which is passed as an argument.
+If the criterion function returns True, the item is selected.
+
+def is_it_even(number: int):
+    if number % 2 == 0:
+        return True
+    return False
+
+integers = [1, 2, 3, 5, 6, 4, 9, 10, 14, 15]
+
+even_numbers = filter(is_it_even, integers)
+
+for number in even_numbers:
+    print(number)
+
+The filter function resembles the map function in also that it returns an iterator.
+There are situations where you should be especially careful with filter as iterators can only be traversed once.
+
+
+
+- REDUCE
+A third cornerstone function in this introduction to functional programming principles is reduce, from the functools module.
+As the name implies, its purpose is to reduce the items in a series into a single value.
+The reduce function starts with an operation and an initial value. It performs the given operation on each item in the series in turn, so that the value changes at each step.
+Once all items have been processed, the resulting value is returned.
+
+This function takes two arguments: the current reduced value and the item whose turn it is to be processed. These are used to calculate a new value for the reduced value. In this case the new value is the sum of the old value and the current item.
+If the initial value is left out, reduce takes the first item in the list as the initial value and starts reducing from the second item onwards.
+
+
+- REGEX EXPRESSIONS
+Regular expressions are not just a Python feature. They represent, in a way, a programming language within a programming language.
+They are, to an extent, compatible across many different programming languages.
+Regular expressions have their own specific syntax.
+The idea is to define a collection of strings which follow certain rules.
+
+import re
+words = ["Python", "Pantone", "Pontoon", "Pollute", "Pantheon"]
+for word in words:
+    # the string should begin with "P" and end with "on"
+    if re.search("^P.*on$", word):
+        print(word, "found!")
+
+
+We need to import the re module in order to use regular expressions in Python.
+
+* Alternate substrings
+The vertical bar |, also called the pipe character, allows you to match alternate substrings.
+Its significance is thus or.
+For example, the expression 911|112 matches strings which include either the substring 911 or the substring 112.
+
+* Groups of characters
+Square brackets are used to signify groups of accepted characters.
+For example, the expression [aeio] would match all strings which contain any of the characters a, e, i, or o.
+
+* Repeated matches
+Any part of an expression can be repeated with the following operators:
+
+    * repeats for any number of times, including zero
+    + repeats for any number of times, but at least once
+    {m} repeats for exactly m times
+These operators work on the part of the expression immediately preceding the operator.
+For example, the expression ba+b would match the substrings bab, baab and baaaaaaaaaaab, among others.
+The expression A[BCDE]*Z would match the substrings AZ, ADZ or ABCDEBCDEBCDEZ, among others.
+
+* Other special characters
+A dot is a wildcard character which can match any single character.
+For example, the expression c...o would match any five character substring beginning with a c and ending with an o, such as c-3po or cello.
+
+The ^ character specifies that the match must be at the beginning of the string, and $ specifies that the match must be at the end of the string.
+These can also be used to exclude from the matches any other characters than those specified
+
+Round brackets can be used to group together different parts of the expression.
+For example, the expression (ab)+c would match the substrings abc, ababc and ababababababc, but not the strings ac or bc, as the entire substring ab would have to appear at least once.
+
