@@ -130,6 +130,19 @@ class Bookshelf(BookContainer):
     def add_book(self, book: Book, location: int):  # Overriding !!!
         self.books.insert(location, book)
 
+#------------------
+class Dog:
+    def __init__(self):
+        self.temperament = "loyal"
+class Labrador(Dog):
+    def __init__(self):
+        super().__init__()
+        self.temperament = "gentle"
+
+doggo = Dog()
+print(f"A dog is {doggo.temperament}")  #loyal
+sparky = Labrador()
+print(f"Sparky is {sparky.temperament}") #gentle
 
 # ---------------
 # what if all attributes are not identical
@@ -403,3 +416,22 @@ while True:
     # The argument 60 dictates that the loop should be executed 60 times a second, which means that the image moves 60 pixels to the right each second.
     # This approximately matches the FPS or frames per second value used with games.
     clock.tick(60)
+
+
+# -----------
+# Slicing
+# -----------
+my_list = [1,2,3]
+print(my_list[-1])  # it means last member of list
+
+#slicing the list
+piano_keys = ["a", "b", "c", "d", "e", "f", "g"]
+print(piano_keys[2:5:2]) # from position 2 (c) to position 5 (e) but get every second char
+# so prints c and e
+
+print(piano_keys[::2]) # for whole list , print every second char
+# a, c, e, g
+
+print((piano_keys[::-1])) #prints whole list from reverse
+
+print((piano_keys[1:])) # give everthing in the list except first item

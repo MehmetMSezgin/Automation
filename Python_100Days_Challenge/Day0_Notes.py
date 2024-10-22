@@ -76,6 +76,13 @@ list(my_tuple)
 * screen.onkey(key="space", fun=move_forwards)  
 !!! When pass function as inputs remove paranthesis
 
+--------------
+DAY 20
+--------------
+my_list = [1,2,3]
+print(my_list[-1]) # it means last member of list
+
+#slicing the list
 
 '''
 
