@@ -435,3 +435,22 @@ print(piano_keys[::2]) # for whole list , print every second char
 print((piano_keys[::-1])) #prints whole list from reverse
 
 print((piano_keys[1:])) # give everthing in the list except first item
+
+# -----------
+# Passing func as argument
+# -----------
+"""
+when you pass a function as a parameter in Python, you should write the function name without parentheses.
+
+Explanation:
+With parentheses: When you write a function name followed by parentheses (e.g., my_function()), you are calling the function, meaning the function will be executed immediately, and the result of the function call will be passed as an argument.
+Without parentheses: When you write the function name without parentheses (e.g., my_function), you are passing the function itself as an argument, which means you can call the function later inside the receiving function.
+"""
+def greet():
+    print("Hello!")
+
+def execute_function(func):
+    func()  # Calling the function passed as an argument
+
+# Pass the 'greet' function without parentheses
+execute_function(greet)
