@@ -13,6 +13,7 @@ import turtle
 from turtle import Screen, Turtle
 from paddle import Paddle
 from ball import Ball
+from scoreboard import Scoreboard
 import time
 
 WIDTH = 800
@@ -28,6 +29,7 @@ screen.tracer(0)  # stop the animation
 r_paddle = Paddle(350, 0)
 l_paddle = Paddle(-350, 0)
 ball = Ball()
+scoreboard = Scoreboard()
 
 screen.listen()
 screen.onkey(r_paddle.go_up, "Up")
@@ -37,7 +39,7 @@ screen.onkey(l_paddle.go_down, "s")
 
 game_is_on = True
 while game_is_on:
-    time.sleep(0.1)
+    time.sleep(ball.ball_velocity)
     screen.update()
     ball.move_the_ball()
 
@@ -46,7 +48,18 @@ while game_is_on:
         ball.bounce_y()
 
     # Detect collision with r_paddle
-    if ball.distance(r_paddle) < 50 and ball.xcor() > 320 or ball.distance(l_paddle) and ball.xcor() < -320:
+    if ball.distance(r_paddle) < 50 and ball.xcor() > 320 or ball.distance(l_paddle) < 50 and ball.xcor() < -320:
         ball.bounce_x()
+
+    # detect when ball goes out
+    if ball.xcor() > 380:
+        ball.reset_ball_position()
+        ball.ball_change_direction()
+        scoreboard.left_scored()
+
+    if ball.xcor() < -380:
+        ball.reset_ball_position()
+        ball.ball_change_direction()
+        scoreboard.right_scored()
 
 screen.exitonclick()
