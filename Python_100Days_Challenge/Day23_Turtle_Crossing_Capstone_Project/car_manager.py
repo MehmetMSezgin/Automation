@@ -11,7 +11,9 @@ class CarManager(Turtle):
     def __init__(self):
         super().__init__()
 
+        self.penup()
         self.car_list = []
+        self.car_speed = STARTING_MOVE_DISTANCE
 
     def generate_car(self):
         # let generate a random chance to create a car so it will reduce frequency
@@ -29,7 +31,12 @@ class CarManager(Turtle):
 
     def move_cars(self):
         for car in self.car_list:
-            car.backward(STARTING_MOVE_DISTANCE)
+            car.backward(self.car_speed)
+
+    def increase_car_speed(self):
+        self.car_speed += MOVE_INCREMENT
+
+
 
 
 
